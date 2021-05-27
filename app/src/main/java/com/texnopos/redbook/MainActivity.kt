@@ -9,6 +9,7 @@ import com.google.android.material.navigation.NavigationView
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
+import com.texnopos.redbook.ui.animal.AnimalFragment
 
 class MainActivity : AppCompatActivity() {
 
@@ -37,6 +38,8 @@ class MainActivity : AppCompatActivity() {
                 else -> return@setNavigationItemSelectedListener false
             }
         }
+
+        supportFragmentManager.beginTransaction().replace(R.id.fragmentContainer,AnimalFragment()).commit()
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
