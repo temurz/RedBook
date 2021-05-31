@@ -7,7 +7,7 @@ import androidx.room.RoomDatabase
 import com.texnopos.redbook.data.dao.AnimalDao
 import com.texnopos.redbook.data.model.Animal
 
-@Database(entities = [Animal::class],version = 1)
+@Database(entities = [Animal::class],version = 1,  exportSchema = false)
 abstract class RedBookDatabase : RoomDatabase() {
     companion object {
         private lateinit var INSTANCE : RedBookDatabase
@@ -19,6 +19,7 @@ abstract class RedBookDatabase : RoomDatabase() {
                 "book-database.db"
             )
                 .createFromAsset("book-database.db")
+                    .allowMainThreadQueries()
                 .build()
     }
 
