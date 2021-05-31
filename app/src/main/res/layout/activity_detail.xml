@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".ui.detail.DetailActivity">
+
+        <ImageView
+            android:id="@+id/ivDetail"
+            android:layout_width="0dp"
+            android:layout_height="250dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_standard"
+            android:layout_marginTop="@dimen/margin_standard"
+            android:text="@string/status"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ivDetail" />
+
+        <TextView
+            android:id="@+id/tvStatusContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/small_margin"
+            app:layout_constraintStart_toStartOf="@id/tvStatus"
+            app:layout_constraintTop_toBottomOf="@id/tvStatus" />
+
+        <TextView
+            android:id="@+id/tvPropagation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_standard"
+            android:text="@string/propagation"
+            android:textColor="@android:color/background_dark"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/tvStatus"
+            app:layout_constraintTop_toBottomOf="@id/tvStatusContent" />
+
+        <TextView
+            android:id="@+id/tvPropagationContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/small_margin"
+            app:layout_constraintStart_toStartOf="@id/tvStatus"
+            app:layout_constraintTop_toBottomOf="@id/tvPropagation" />
+
+
+        <TextView
+            android:id="@+id/tvHabitat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_standard"
+            android:text="@string/habitat"
+            android:textColor="@android:color/background_dark"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/tvStatus"
+            app:layout_constraintTop_toBottomOf="@id/tvPropagationContent" />
+
+        <TextView
+            android:id="@+id/tvHabitatContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/small_margin"
+            app:layout_constraintStart_toStartOf="@id/tvStatus"
+            app:layout_constraintTop_toBottomOf="@id/tvHabitat" />
+
+        <TextView
+            android:id="@+id/tvQuantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_standard"
+            android:text="@string/quantity"
+            android:textColor="@android:color/background_dark"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/tvStatus"
+            app:layout_constraintTop_toBottomOf="@id/tvHabitatContent" />
+
+        <TextView
+            android:id="@+id/tvQuantityContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/small_margin"
+            app:layout_constraintStart_toStartOf="@id/tvStatus"
+            app:layout_constraintTop_toBottomOf="@id/tvQuantity" />
+
+        <TextView
+            android:id="@+id/tvLifestyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_standard"
+            android:text="@string/lifestyle"
+            android:textColor="@android:color/background_dark"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/tvStatus"
+            app:layout_constraintTop_toBottomOf="@id/tvQuantityContent" />
+
+        <TextView
+            android:id="@+id/tvLifestyleContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/small_margin"
+            app:layout_constraintStart_toStartOf="@id/tvStatus"
+            app:layout_constraintTop_toBottomOf="@id/tvLifestyle" />
+
+        <TextView
+            android:id="@+id/tvLimitingFactors"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_standard"
+            android:text="@string/limiting_factors"
+            android:textColor="@android:color/background_dark"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/tvStatus"
+            app:layout_constraintTop_toBottomOf="@id/tvLifestyleContent" />
+
+        <TextView
+            android:id="@+id/tvLimitingFactorsContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/small_margin"
+            app:layout_constraintStart_toStartOf="@id/tvStatus"
+            app:layout_constraintTop_toBottomOf="@id/tvLimitingFactors" />
+
+        <TextView
+            android:id="@+id/tvBreeding"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_standard"
+            android:text="@string/breeding"
+            android:textColor="@android:color/background_dark"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/tvStatus"
+            app:layout_constraintTop_toBottomOf="@id/tvLimitingFactorsContent" />
+
+        <TextView
+            android:id="@+id/tvBreedingContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/small_margin"
+            app:layout_constraintStart_toStartOf="@id/tvStatus"
+            app:layout_constraintTop_toBottomOf="@id/tvBreeding" />
+
+        <TextView
+            android:id="@+id/tvSecurity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_standard"
+            android:text="@string/security"
+            android:textColor="@android:color/background_dark"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/tvStatus"
+            app:layout_constraintTop_toBottomOf="@id/tvBreedingContent"/>
+
+        <TextView
+            android:id="@+id/tvSecurityContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/small_margin"
+            app:layout_constraintStart_toStartOf="@id/tvStatus"
+            app:layout_constraintTop_toBottomOf="@id/tvSecurity"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
