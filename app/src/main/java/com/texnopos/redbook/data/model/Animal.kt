@@ -7,6 +7,7 @@ import androidx.room.PrimaryKey
 @Entity(tableName = "book")
 data class Animal (
     @PrimaryKey
+    @ColumnInfo(name = "id")
     val id : Int,
 
     @ColumnInfo(name = "type")
@@ -36,7 +37,7 @@ data class Animal (
     @ColumnInfo(name = "lifestyle")
     val lifestyle : String,
 
-    @ColumnInfo(name = "limiting factors")
+    @ColumnInfo(name = "limitingFactors")
     val limitingfactors : String,
 
     @ColumnInfo(name = "breeding")

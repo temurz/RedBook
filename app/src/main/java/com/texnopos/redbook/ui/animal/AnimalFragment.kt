@@ -8,6 +8,7 @@ import androidx.room.Dao
 import com.texnopos.redbook.R
 import com.texnopos.redbook.data.RedBookDatabase
 import com.texnopos.redbook.data.dao.AnimalDao
+import com.texnopos.redbook.ui.MainActivity
 import kotlinx.android.synthetic.main.fragment_animal.*
 
 class AnimalFragment : Fragment(R.layout.fragment_animal){
@@ -19,11 +20,12 @@ class AnimalFragment : Fragment(R.layout.fragment_animal){
         super.onViewCreated(view, savedInstanceState)
         recyclerView.adapter = myAdapter
         recyclerView.addItemDecoration(DividerItemDecoration(requireContext(), DividerItemDecoration.VERTICAL))
+        val type = arguments?.getInt(MainActivity.TYPE_ID) ?: 1
         dao = RedBookDatabase.getInstance(requireContext()).dao()
-        setData()
+        setData(type)
     }
-    private fun setData() {
-        myAdapter.models = dao.getAllAnimals()
+    private fun setData(type : Int) {
+        myAdapter.models = dao.getAllAnimals(type)
     }
 
 }

@@ -16,18 +16,15 @@ class AnimalListAdapter : RecyclerView.Adapter<AnimalListAdapter.AnimalListViewH
         notifyDataSetChanged()
     }
 
-
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AnimalListViewHolder {
         val itemView = LayoutInflater.from(parent.context).inflate(R.layout.item_animal,parent,false)
         return AnimalListViewHolder(itemView)
     }
+    override fun getItemCount(): Int = models.size
 
     override fun onBindViewHolder(holder: AnimalListViewHolder, position: Int) {
         holder.populateModel(models[position])
     }
-
-    override fun getItemCount(): Int = models.size
     inner class AnimalListViewHolder(itemView : View) : RecyclerView.ViewHolder(itemView){
         fun populateModel(animal: Animal){
             itemView.uzbName.text = animal.nameUzb
